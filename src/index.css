@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Epilogue", sans-serif;
+  --font-body: "Lexend", sans-serif;
+
+  --color-primary: #b3c5ff;
+  --color-primary-container: #002366;
+  --color-secondary: #e9c349;
+  --color-secondary-container: #af8d11;
+  --color-surface: #121416;
+  --color-surface-container-lowest: #0c0e10;
+  --color-surface-container-low: #1a1c1e;
+  --color-surface-container: #1e2022;
+  --color-surface-container-high: #282a2c;
+  --color-surface-container-highest: #333537;
+  --color-on-surface: #e2e2e5;
+  --color-on-surface-variant: #c5c6d2;
+  --color-error: #ffb4ab;
+  --color-outline-variant: #444650;
+}
+
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@700;800;900&family=Lexend:wght@300;400;500;600;700&display=swap');
+
+  body {
+    @apply bg-surface text-on-surface font-body selection:bg-secondary/30;
+    min-height: 100dvh;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.tap-highlight-none {
+  -webkit-tap-highlight-color: transparent;
+}
